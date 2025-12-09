@@ -162,8 +162,9 @@ The exclusive gateway evaluates the condition and routes the process directly to
 - End event: **Auto Approved**
 - Variable visible: `confidenceScore = 0.95`
 
- Screenshot: Auto-approved process instance  
-(docs/auto-approved.png) (same execution shown above)
+ Screenshot: Auto-approved process instance
+
+![Scenario A – Auto Approved](docs/scenario-auto-approved.png)
 
 ---
 
@@ -184,8 +185,9 @@ The process is routed to the **Human Review** user task, requiring a manual deci
 - Active User Task: **Human Review**
 - Variable visible: `confidenceScore = 0.2`
 
-Screenshot: Human review waiting  
-(docs/scenario-human-review.png)
+📸Screenshot: Human review waiting
+
+![Scenario B – Human Review Required](docs/scenario-human-review.png)
 
 ---
 
@@ -205,8 +207,7 @@ A second exclusive gateway routes the process based on the human decision.
 - Gateway evaluates human decision
 - Process ends in the correct final state
 
-📸 Screenshot: Human-approved execution  
-`docs/scenario-human-approved.png`
+
 
 ---
 
