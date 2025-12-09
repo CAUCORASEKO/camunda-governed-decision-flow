@@ -162,8 +162,8 @@ The exclusive gateway evaluates the condition and routes the process directly to
 - End event: **Auto Approved**
 - Variable visible: `confidenceScore = 0.95`
 
-Screenshot: Auto-approved process instance  
-`docs/operate-screenshot.png` (same execution shown above)
+ Screenshot: Auto-approved process instance  
+(docs/auto-approved.png) (same execution shown above)
 
 ---
 
@@ -184,8 +184,8 @@ The process is routed to the **Human Review** user task, requiring a manual deci
 - Active User Task: **Human Review**
 - Variable visible: `confidenceScore = 0.2`
 
-📸 Screenshot: Human review waiting  
-`docs/scenario-human-review.png`
+Screenshot: Human review waiting  
+(docs/scenario-human-review.png)
 
 ---
 
