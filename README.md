@@ -162,7 +162,7 @@ The exclusive gateway evaluates the condition and routes the process directly to
 - End event: **Auto Approved**
 - Variable visible: `confidenceScore = 0.95`
 
-📸 📸 Screenshot: Auto-approved process instance  
+Screenshot: Auto-approved process instance  
 `docs/operate-screenshot.png` (same execution shown above)
 
 ---
