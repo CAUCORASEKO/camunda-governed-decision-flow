@@ -1,26 +1,22 @@
-require('dotenv').config();          // Carga el .env
+require('dotenv').config();
 const { ZBClient } = require('zeebe-node');
 
-// El cliente detecta ZEEBE_ADDRESS, ZEEBE_CLIENT_ID y ZEEBE_CLIENT_SECRET desde .env
 const zbc = new ZBClient();
 
-console.log('Worker conectado a Camunda Cloud 🚀');
+console.log('✅ Worker connected to Camunda Cloud');
 
-// Worker para la tarea "automated-evaluation"
 zbc.createWorker({
   taskType: 'automated-evaluation',
   taskHandler: async (job) => {
-    console.log('Procesando job', job.key);
+    console.log('📥 Processing job:', job.key);
 
-    // Simulamos un score entre 0 y 1
-    const confidenceScore = Math.random();
-    console.log('Calculated confidenceScore:', confidenceScore);
+    // Scenario A: force auto-approval
+    const confidenceScore = 0.2;
 
-    // Enviamos la variable al proceso
-    await job.complete({
-      confidenceScore,
-    });
+    console.log('✅ Calculated confidenceScore:', confidenceScore);
 
-    console.log('Job completado ✅');
+    await job.complete({ confidenceScore });
+
+    console.log('✅ Job completed successfully');
   },
 });
